@@ -29,11 +29,43 @@
                 body.style.color = 'black';
             ">
             <h2>HTML</h2>
-            <a target="_blank" href="http://w3c.org">HTML</a> is <u>Hyper<strong>Text</strong> Markup</u> Langauge
-            ls
-            view - command palette
-            git commit
+            <input type="button" value="night" onclick="
+            var body = domcument.querySelector('body');
+            alert('hi');">
+        <div>
+            name : <input type="text" id="name" onchange="
+                var name=document.querySelector('#name').value;
+                var result = 'Lorem ipsum '+name+' sit amet consectetur adipisicing elit. Itaque amet eveniet '+name+' earum aut voluptas. Consequuntur perferendis natus, '+name+' mollitia quibusdam odit, laborum tempora omnis nesciunt perspiciatis, sed eum aliqui';
+                ">
+            <a target="_blank" href="http://w3c.org">HTML</a> is 
+            <u>Hyper<strong>Text</strong> Markup</u> Langauge
+           
+           
+        </div>
 
+        <div>
+            result : <textarea id="res" cols="30" rows="10"></textarea>
+        </div>
+           <div id="disqus_thread"></div>
+            <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://hana-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                      
         </div>
     </div>
 
