@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+
+</head>
+<body>
+    <h1>Object</h1>
+    <script>
+        var members = { 
+            'developer' : 'Rickykim',
+            'account' : 'nala',
+            'designer' : 'bongbong',
+            'printAllMember' : function(){
+                console.log(this.developer);
+                console.log(this.designer);
+                console.log(this.account);
+            }
+        }
+        console.log(members.printAllMember());
+     </script>
+</body>
+
+</html>

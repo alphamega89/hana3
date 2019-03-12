@@ -27,21 +27,8 @@
                     this.value = 'night';
                 }
             ">
-            <input type="text" onchange="alert('changed');">
-            <input type="button" value="night">
-            <input type="button" value="night" onclick="
-                var body = document.querySelector('body');
-                body.style.backgroundColor = 'black';
-                body.style.color = 'white';
-            ">
-            <input type="button" value="day" onclick="
-                var body = document.querySelector('body');
-                body.style.backgroundColor = 'white';
-                body.style.color = 'black';
-            ">
-            <h2>HTML</h2>
-            <a target="_blank" href="http://w3c.org">HTML</a> is <u>Hyper<strong>Text</strong> Markup</u> Langauge
-
+            <h2>CSS</h2>
+            CSS is cascading stylesheet.
             <html>
   <head>
     <!--Load the AJAX API-->
@@ -64,17 +51,17 @@
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
+          ['금융개발부', 25],
+          ['데이터전략부', 20],
+          ['디지털개발부', 30],
+          ['글로벌개발부', 20],
+          ['시스템운영부', 10]
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':400,
-                       'height':300};
+        var options = {'title':'우리가 어느 부서에 배치될 것인가',
+                       'width':600,
+                       'height':400};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -90,7 +77,6 @@
 </html>
         </div>
     </div>
-
 </body>
 
 </html>
