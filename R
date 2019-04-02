@@ -1,1 +1,12 @@
 https://drive.google.com/file/d/1a5Yp8d_ZgtqzV1HYApoJt-uQPGND5Dvf/view
+
+
+
+df = data.frame()
+for(n in 1:length(file_list)){
+  df_sub = read.csv(file_list[n], stringsAsFactors = FALSE)
+  df = rbind(df, df_sub)
+  cat(paste0("\r==== Progress :", n, "/100 ",
+             "(", round((n/length(file_list)) * 100, 1),"%)"," ===="))
+  Sys.sleep(0.2)
+}
