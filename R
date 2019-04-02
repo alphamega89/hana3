@@ -10,3 +10,40 @@ for(n in 1:length(file_list)){
              "(", round((n/length(file_list)) * 100, 1),"%)"," ===="))
   Sys.sleep(0.2)
 }
+
+
+#### ____ ● 시간 + 공간 복잡도 줄이기 ####
+# ▶ 다음의 데이터에서 ‘result’ 라는 새로운 column을 생성하시오.
+# ▶ apply() 함수를 활용하여 해당 column을 생성하시오.
+# ▶ apply() 함수에서 연산을 담당하는 함수는 ‘cal_fun()’ 이라는 새로운 사용자정의 함수를 활용하시오.
+# ▶ ‘cal_fun’ 함수는 입력된 모든 숫자를 제곱하고 그 값을 합한 이후에 지정된 자릿수에서 반올림 하도록 작성하시오.
+
+library("data.table")
+df = fread("news_ecommerce_lda_k10.csv", stringsAsFactors = FALSE,
+           select = 1:10, data.table = FALSE)
+head(df,2)
+
+apply(X = df, MARGIN = 2, FUN = "max")
+
+sum(df[1,]^2)
+
+cal_fun = function(X){
+  round(sum(x^2), 2)
+}
+
+cal_fun = function(X, digit = 2){
+  round(sum(X^2), 2)
+}
+
+df[, "result"] = apply(df, 1, FUN="cal_fun", digit = 1)
+
+head(df)
+
+topic = function(X){
+  # which.max(x)
+  which(X == max(X))
+}
+
+df[, "result"] = apply(df[, 1:10], 1, FUN="topic")
+
+head(df)
